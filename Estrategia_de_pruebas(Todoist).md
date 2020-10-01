@@ -2,7 +2,7 @@
 
 ## 1. Tiempo y presupuesto
 
-Se cuenta con un tiempo total de 10 horas para el diseño de la suite de pruebas y su implementación. De este modo se busca realizar pruebas exploratorias sobre la aplicación para despues establecer las pruebas de tipo end to end que permitan realizar regresiones.
+Se cuenta con un tiempo total de 16 horas para el diseño de la suite de pruebas y su implementación. De este modo se busca realizar pruebas exploratorias sobre la aplicación para despues establecer una suite de pruebas de tipo end to end que permitan realizar regresiones.
 
 En cuanto a infraestructura se cuenta con una máquina local con sistema operativo Linux. Esta máquina tiene 16GB de RAM y 12 núcleos.
 
@@ -20,12 +20,15 @@ Se busca enfocar las pruebas en las funcionalidades principales de la aplicació
 ## 4. Funcionalidades a probar
 
 1. Proceso de login/registro
-2. CRUD sobre las tareas
-3. Completar una tarea
-4. CRUD de proyectos
-5. Agregar un filtro
-6. Aplicar un filtro
-7. Agregar, leer y eliminar un comentario
+2. CRUD de proyecto
+3. CRUD de seccion
+4. CRUD sobre las tareas
+5. Completar una tarea
+6. CRUD de subtarea 
+7. CRUD de comentario 
+8. Agregar un filtro
+9. Aplicar un filtro
+
 
 ## 5. Niveles
 
