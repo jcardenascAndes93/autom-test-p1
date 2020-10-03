@@ -25,7 +25,6 @@ Se busca enfocar las pruebas en las funcionalidades principales de la aplicació
 4. CRUD sobre las tareas
 5. Completar una tarea
 6. CRUD de subtarea 
-7. CRUD de comentario 
 8. Agregar un filtro
 9. Aplicar un filtro
 
