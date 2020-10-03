@@ -20,21 +20,15 @@ context('Tasks CRUD test', () => {
         // Search and then click in the plus button
         cy.wait(1500);
         // Search plus button
-        cy.get('button[class="plus_add_button"]').first().click();
+        cy.get('.task_actions .plus_add_button').click()
         cy.wait(500);
         // Add task
         cy.get('.richtextinput').type('Tarea importante');
         cy.get('button[type="submit"]').click();
         cy.contains('Tarea importante').should('be.visible');
-        cy.get('button[class="cancel"]').click();
     });
 
     it('Cancel add a task', () => {
-        // Search and then click in the plus button
-        cy.wait(1500);
-        // Search plus button
-        cy.get('button[class="plus_add_button"]').first().click();
-        cy.wait(500);
         // Add task
         cy.get('.richtextinput').type('Otra tarea importante');
         cy.get('button[class="cancel"]').click();
@@ -44,17 +38,41 @@ context('Tasks CRUD test', () => {
 
     it('Mark tasks as done', () => {
         // Mark task as done
-        cy.get('button[role="checkbox"]').eq(1).click();
+        cy.get('button[role="checkbox"]').eq(0).click();
         cy.contains('Undo').should('be.visible');
     });
 
     it('Undo task done', () => {
-        // Mark task as done
-        cy.get('button[role="checkbox"]').eq(1).click();
         // Undo done tasks
         cy.get('button').contains('Undo').click();
         // Checks tasks length
-        cy.get('.task_content').should('have.length', 2);
+        cy.contains('Tarea importante').should('be.visible');
+
+    });
+	
+	it('Edit task click task description', () => {
+		cy.wait(1500);
+        cy.contains("Tarea importante").click({force:true});
+		cy.get('.item_actions_more').click();
+		cy.get('.icon_menu_item__content').eq(0).click();
+        // Edit task
+		cy.get('.richtextinput').type(' editada');
+        cy.get('button[type="submit"]').click();
+		cy.get('.item_detail_close').click();
+		cy.contains('Tarea importante editada').should('be.visible');
+
+    });
+	
+	it('Delete task ', () => {
+		cy.wait(1500);
+        cy.contains("Tarea importante editada").click({force:true});
+		cy.get('.item_actions_more').click();
+		// Delete task
+		cy.get('.icon_menu_item__content').eq(4).click();
+        
+		//Confirm delete
+        cy.get('button[type="submit"]').click();
+		cy.contains('Tarea importante editada').should('not.be.visible');
 
     });
 
