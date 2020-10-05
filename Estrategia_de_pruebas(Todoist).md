@@ -25,8 +25,9 @@ Se busca enfocar las pruebas en las funcionalidades principales de la aplicació
 4. CRUD sobre las tareas
 5. Completar una tarea
 6. CRUD de subtarea 
-8. Agregar un filtro
-9. Aplicar un filtro
+8. Agregar un filtro - premiun
+9. Aplicar un filtro - premiun
+10. CRUD de comentario - premiun
 
 
 ## 5. Niveles
